@@ -98,20 +98,6 @@ if (!isset($user_id)) {
             <p class="card-text">Information System 2022</p>
           </div>
         </div>
-        <!-- <div class="col card shadow m-3" style="width: 18rem;">
-          <img src="../assets/img/banner-search.png" class="card-img-top p-4" alt="Lina Mulia Sari">
-          <div class="card-body text-center">
-            <p class="card-text">Lina Mulia Sari</p>
-            <p class="card-text">Informatika</p>
-          </div>
-        </div>
-        <div class="col card shadow m-3" style="width: 18rem;">
-          <img src="../assets/img/banner-search.png" class="card-img-top p-4" alt="Trio Tahril Rifandi">
-          <div class="card-body text-center">
-            <p class="card-text">Rijaldi</p>
-            <p class="card-text">Informatika</p>
-          </div> -->
-        </div>
       </div>
     </section>
   </main>
