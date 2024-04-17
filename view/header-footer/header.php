@@ -94,12 +94,12 @@ if (isset($message)) {
             <ul class="dropdown-menu text-justify p-4" style="min-width: 250px;">
               <p>Name : <span><?php echo $_SESSION['user_nama']; ?></span></p>
               <p><span><?php echo $_SESSION['user_email']; ?></span></p>
-              <a href="./../php/logout.php" class="delete-btn">
+              <a href="logout.php" class="delete-btn">
                 <i class="bi bi-box-arrow-right"></i>
               </a>
             </ul>
             <a href="search-page.php" class="my-3"><i class="bi bi-search"></i></a>
-            <a href="./cart.php" class="my-3 px-4"><i class="bi bi-bag-fill"></i></a>
+            <a href="cart.php" class="my-3 px-4"><i class="bi bi-bag-fill"></i></a>
           </div>
 
 
