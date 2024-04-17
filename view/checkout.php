@@ -1,10 +1,10 @@
 <?php
-include '../php/koneksi.php';
+include 'koneksi.php';
 session_start();
 
 // Redirect to login page if user is not logged in
 if (!isset($_SESSION['user_id'])) {
-  header('location:../php/login.php');
+  header('location:login.php');
   exit;
 }
 
@@ -69,7 +69,7 @@ if (isset($_POST['order_btn'])) {
 </head>
 
 <body>
-  <?php include('../view/header-footer/header.php') ?>
+  <?php include('header.php') ?>
 
   <section class="shadow rounded m-5">
     <h2 class="text-center fs-4 m-4 p-3 fw-medium">Let's Go Checkout</h2>
