@@ -1,15 +1,10 @@
 <?php
-
-include '../php/koneksi.php';
-
+include 'koneksi.php';
 session_start();
-
 $user_id = $_SESSION['user_id'];
-
 if (!isset($user_id)) {
-  header('location:../php/login.php');
+  header('location:login.php');
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +33,7 @@ if (!isset($user_id)) {
       align-items: center;
       justify-content: center;
       gap: 3rem;
-      background: url(../assets/img/searchh.jpg) no-repeat;
+      background: url(searchh.jpg) no-repeat;
       background-size: 100%;
       background-position: center;
       text-align: center;
@@ -58,12 +53,29 @@ if (!isset($user_id)) {
     a:hover {
       color: black;
     }
+
+    .image {
+      max-width: 100%;
+      max-height: 400px; /* Tinggi maksimum gambar */
+      object-fit: cover; /* Menyesuaikan gambar agar sesuai proporsi tanpa memutar atau mengubah aspek ratio */
+    }
+
+    .shadow-box {
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Media query untuk memperluas lebar foto ketika layar penuh */
+    @media screen and (min-width: 1200px) {
+      .image {
+        max-height: 300px; /* Atur tinggi maksimum gambar pada layar penuh */
+      }
+    }
   </style>
 </head>
 
 <body>
 
-  <?php include('./header-footer/header.php') ?>
+  <?php include('header.php') ?>
   <div class="headings">
     <h1 class=" text-white fs-1 fw-bold text-uppercase ">TorajaFest Cart</h1>
     <div class="pags rounded" aria-label="breadcrumb">
@@ -90,7 +102,7 @@ if (!isset($user_id)) {
         if (mysqli_num_rows($select_events) > 0) {
           while ($fetch_event = mysqli_fetch_assoc($select_events)) {
       ?>
-            <div class="shadow rounded m-3 border border-3 border-dark text-center fw-bold ">
+            <div class="shadow-box rounded m-3 border border-3 border-dark text-center fw-bold ">
               <img src="uploaded_img/<?php echo $fetch_event['image']; ?>" alt="" class="image">
               <div class="nama"><?php echo $fetch_event['nama_events']; ?></div>
               <!-- <div class="price"> Rp <?php echo $fetch_event['harga_events']; ?> /-</div> -->
