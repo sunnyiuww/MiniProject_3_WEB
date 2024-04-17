@@ -83,7 +83,7 @@ if (isset($message)) {
               <a class="nav-link active" aria-current="page" href="user-panel.php">User</a>
             </li>
             <li class="nav-item px-2">
-              <a class="nav-link active" aria-current="page" href="admin-message.php">Message</a>
+              <a class="nav-link active" aria-current="page" href="admin-message.php">Feedback</a>
             </li>
           </ul>
           
@@ -100,10 +100,10 @@ if (isset($message)) {
               <i class="bi bi-person-circle"></i>
 
             </button>
-            <ul class="dropdown-menu text-justify p-4" style="min-width: 250px; margin-left: -150px;">
+            <ul class="dropdown-menu text-justify p-4" style="min-width: 100px; margin-left: -50px;">
               <p>Name : <span><?php echo $_SESSION['admin_nama']; ?></span></p>
               <p><span><?php echo $_SESSION['admin_email']; ?></span></p>
-              <a href="./../../php/logout.php" class="delete-btn">
+              <a href="logout.php" class="delete-btn">
                 <i class="bi bi-box-arrow-right"></i>
               </a>
             </ul>
