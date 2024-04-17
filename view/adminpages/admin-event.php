@@ -1,13 +1,13 @@
 <?php
 // admin-event.php
 
-include '../../php/koneksi.php';
+include 'koneksi.php';
 
 session_start();
 $admin_id = $_SESSION['admin_id'];
 
 if (!isset($admin_id)) {
-  header('location:../../php/login.php');
+  header('location:login.php');
 };
 
 if (isset($_POST['add_events'])) {
@@ -17,7 +17,7 @@ if (isset($_POST['add_events'])) {
   $image_name = $_FILES['image']['name'];
   $image_tmp_name = $_FILES['image']['tmp_name'];
   $image_size = $_FILES['image']['size'];
-  $image_folder = '../uploaded_img/' . $image_name;
+  $image_folder = 'uploaded_img/' . $image_name;
 
   // Cek apakah nama event sudah ada dalam database
   $select_events_name = mysqli_query($con, "SELECT nama_events FROM `events` WHERE nama_events = '$nama'") or die('query failed');
@@ -129,7 +129,7 @@ if (isset($_POST['update_events'])) {
             <form action="" method="post" enctype="multipart/form-data">
               <input type="hidden" name="update_p_id" value="<?php echo $fetch_update['id_events']; ?>">
               <input type="hidden" name="update_old_image" value="<?php echo $fetch_update['image']; ?>">
-              <img src="../uploaded_img/<?php echo $fetch_update['image']; ?>" alt="" style="width: 400px;">
+              <img src="../uploaded_img/<?php echo $fetch_update['image']; ?>" alt="" class="img-fluid" style="width: 400px;">
 
               <div class="m-3">
                 <input type="text" name="update_nama" value="<?php echo $fetch_update['nama_events']; ?>" class="form-control border border-secondary" required placeholder="Masukan Nama Event">
@@ -166,7 +166,7 @@ if (isset($_POST['update_events'])) {
         while ($fetch_events = mysqli_fetch_assoc($select_events)) {
       ?>
           <div class=" border border-secondary m-4 ">
-            <img src="../uploaded_img/<?php echo $fetch_events['image']; ?>" alt="" style="width: 500px;">
+            <img src="../uploaded_img/<?php echo $fetch_events['image']; ?>" alt="" class="img-fluid" style="width: 500px;">
             <div class="nama_events"><?php echo $fetch_events['nama_events']; ?></div>
             <div class="harga_events">Rp <?php echo $fetch_events['harga_events']; ?> /-</div>
             <div class="">Rp <?php echo $fetch_events['harga_events']; ?></div>
