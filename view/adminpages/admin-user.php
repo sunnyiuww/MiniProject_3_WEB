@@ -1,9 +1,14 @@
 <?php
 // admin-user.php
 
-include '../../php/koneksi.php';
+include 'koneksi.php';
 
 session_start();
+$user_id = $_SESSION['admin_id'];
+
+if (!isset($user_id)) {
+  header('location:login.php');
+}
 
 // Memeriksa apakah parameter 'delete' ada pada URL dan tidak kosong
 if(isset($_GET['delete']) && !empty($_GET['delete'])) {
