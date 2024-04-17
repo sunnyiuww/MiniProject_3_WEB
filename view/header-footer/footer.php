@@ -9,20 +9,6 @@
          <a href="./contact.php" class="text-decoration-none m-4" style="color: #19376d;">Contact</a>
          <a href="./transaksi.php" class="text-decoration-none m-4" style="color: #19376d;">Transaksi</a>
       </div>
-      <div class="col my-3">
-         <h3 class="text-uppercase fs-3">follow us</h3>
-         <a href="www.facebook.com" class="text-decoration-none m-3" style="color: #19376d;"> <i class="fab fa-facebook-f"></i> Facebook </a>
-         <a href="www.instagram.com" class="text-decoration-none m-3" style="color: #19376d;"> <i class="fab fa-instagram"></i> Instagram </a>
-         <a href="home.php" class="text-decoration-none m-3" style="color: #19376d;"> <i class="fab fa-instagram"></i> DreamFest </a>
-      </div>
-
-      <div class="col my-3">
-         <h3 class="text-uppercase fs-3">CONTACT INFORMATIOn</h3>
-         <p> <i class="fas fa-phone"></i> +123-456-7890 </p>
-         <p> <i class="fas fa-phone"></i> +62 8234 332</p>
-         <p> <i class="fas fa-envelope"></i> Dreamfest@gmail.com </p>
-         <p> <i class="fas fa-map-marker-alt"></i> Bandung, Jawa Barat - Indonesia </p>
-      </div>
 
       <div class="col my-3">
          <h3 class="text-uppercase fs-3">extra links</h3>
