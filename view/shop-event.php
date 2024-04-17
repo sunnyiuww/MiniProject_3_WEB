@@ -1,11 +1,11 @@
 <?php
 
-include '../php/koneksi.php';
+include 'koneksi.php';
 session_start();
 
 // Periksa apakah user sudah login
 if (!isset($_SESSION['user_id'])) {
-  header('location:../php/login.php');
+  header('location:login.php');
   exit; // Pastikan untuk keluar dari skrip setelah mengarahkan pengguna ke halaman login
 }
 
@@ -68,7 +68,7 @@ if (isset($_POST['add_cart'])) {
     align-items: center;
     justify-content: center;
     gap: 1rem;
-    background: url(../assets//img/event.png) no-repeat;
+    background: url(event.png) no-repeat;
     background-size: cover;
     background-position: center;
     text-align: center;
@@ -126,7 +126,7 @@ if (isset($_POST['add_cart'])) {
 </style>
 
 <body>
-  <?php include('./header-footer/header.php') ?>
+  <?php include('header.php') ?>
   <div class="headings">
     <h1 class="text-white fs-1 fw-bolder text-uppercase">Latest Events</h1>
     <div class="pags rounded" aria-label="breadcrumb">
@@ -165,7 +165,7 @@ if (isset($_POST['add_cart'])) {
     ?>
   </div>
 
-  <?php include('./header-footer/footer.php') ?>
+  <?php include('footer.php') ?>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
