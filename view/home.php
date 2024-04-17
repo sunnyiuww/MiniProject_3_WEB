@@ -1,12 +1,12 @@
 <?php
 
-include '../php/koneksi.php';
+include 'koneksi.php';
 
 session_start();
 $user_id = $_SESSION['user_id'];
 
 if (!isset($user_id)) {
-  header('location:../php/login.php');
+  header('location:login.php');
 }
 ?>
 
@@ -40,7 +40,7 @@ if (!isset($user_id)) {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: url(../assets/img/home.jpg) no-repeat;
+    background: url(home.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 
@@ -132,7 +132,7 @@ if (!isset($user_id)) {
 
 
 <body>
-  <?php include('./header-footer/header.php') ?>
+  <?php include('header.php') ?>
 
   <section class="home">
 
@@ -172,7 +172,7 @@ if (!isset($user_id)) {
       <?php
         }
       } else {
-        echo '<p class="empty">no products added yet!</p>';
+        echo '<p class="empty">No products added yet!</p>';
       }
       ?>
 
@@ -192,7 +192,7 @@ if (!isset($user_id)) {
 
   </section> -->
 
-  <?php include('./header-footer/footer.php') ?>
+  <?php include('footer.php') ?>
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
