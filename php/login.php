@@ -19,13 +19,13 @@ if (isset($_POST['submit'])) {
       $_SESSION['admin_nama'] = $row['nama'];
       $_SESSION['admin_email'] = $row['email'];
       $_SESSION['admin_id'] = $row['id_user'];
-      header('location: ../view/adminpages/admin-home.php');
+      header('location:admin-home.php');
     } elseif ($row['user_type'] == 'costumer') {
 
       $_SESSION['user_nama'] = $row['nama'];
       $_SESSION['user_email'] = $row['email'];
       $_SESSION['user_id'] = $row['id_user'];
-      header('location:../view/home.php');
+      header('location:home.php');
     }
   } else {
     $message[] = 'Wrong Email or Password!';
